@@ -16,18 +16,39 @@
     <input type="file" id="excel_file">
 <script>
     
+    function makeTable(array) {
+    var table = document.createElement('table');
+    table.setAttribute("border","2");
+    table.setAttribute("align","center");
+    for (var i = 0; i < array.length; i++) {
+        var row = document.createElement('tr');
+        for (var j = 0; j < array[i].length; j++) {
+            var cell = document.createElement('td');
+            cell.textContent = array[i][j];
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+    return table;
+}
+    
     var excel_file = document.getElementById('excel_file');
     excel_file.addEventListener('change', function(){
         readXlsxFile(excel_file.files[0]).then (function(data){
         //console.log(data);
+        data[0].push("Difference");
         
         for  (i= 1 ; i<data.length ; i++){
           result = data[i];
-          result.push(data[i][3]-data[i][2]);
           text = result.toString();
-          html2pdf().from(text).toPdf().save();
+          data[i].push((data[i][(data[i].length-1)]-data[i][(data[i].length-2)]));
+          var arr= new Array()
+          arr[0]=data[0]
+          arr[1]=data[i]
+          tbl=makeTable(arr);
+          html2pdf().from(tbl).toPdf().save(arr[1][0]);
      console.log(result);
-     console.log("pdf printed");
+     console.log(arr[0][0]);
 
           
        }
@@ -39,3 +60,4 @@
 </script>
 </body>
 </html>
+      
