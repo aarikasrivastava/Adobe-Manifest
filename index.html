@@ -2,39 +2,62 @@
 <html lang="en">
 <head>
 
+
+    <link rel="stylesheet" href="index_style.css" type="text/css">
     <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js">  </script> 
     <script src="upload_excel.js" ></script>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adobe Manifest </title>
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
+
+  <!-- navbar -->
+  <nav class="navbar bg-white">
+    <div class="container-fluid" >
+      <a class="navbar-brand h1" href="#">
+        <img src="logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Manifest
+      </a>
+    </div>
+  </nav>
+
+
     <input type="file" id="excel_file">
+    <button type="button" onclick="myFunction()" class="btn btn-primary">Submit</button>
+    
+
+
 <script>
     
-    function makeTable(array) {
-    var table = document.createElement('table');
-    table.setAttribute("border","2");
-    table.setAttribute("align","center");
-    for (var i = 0; i < array.length; i++) {
-        var row = document.createElement('tr');
-        for (var j = 0; j < array[i].length; j++) {
-            var cell = document.createElement('td');
-            cell.textContent = array[i][j];
-            row.appendChild(cell);
-        }
-        table.appendChild(row);
-    }
-    return table;
-}
     
-    var excel_file = document.getElementById('excel_file');
-    excel_file.addEventListener('change', function(){
-        readXlsxFile(excel_file.files[0]).then (function(data){
+
+      function makeTable(array) 
+      {
+        var table = document.createElement('table');
+        table.setAttribute("border","2");
+        table.setAttribute("align","center");
+        for (var i = 0; i < array.length; i++) {
+          var row = document.createElement('tr');
+            for (var j = 0; j < array[i].length; j++) {
+              var cell = document.createElement('td');
+              cell.textContent = array[i][j];
+              row.appendChild(cell);
+            }
+          table.appendChild(row);
+        }
+        return table;
+      }
+
+
+      // function to submit the excel file for calculation
+function myFunction(){
+
+  readXlsxFile(excel_file.files[0]).then (function(data){
         //console.log(data);
         data[0].push("Difference");
         
@@ -46,6 +69,7 @@
           arr[0]=data[0]
           arr[1]=data[i]
           tbl=makeTable(arr);
+          // html to pdf download
           html2pdf().from(tbl).toPdf().save(arr[1][0]);
      console.log(result);
      console.log(arr[0][0]);
@@ -56,8 +80,18 @@
         
            
         });
-    })
+
+
+  // var excel_file = document.getElementById('excel_file');
+  //   excel_file.addEventListener('change', function(){
+        
+  //   })
+}
+    
+    
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
       
