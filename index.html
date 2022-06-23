@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="index_style.css" type="text/css">
     <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js">  </script> 
     <script src="upload_excel.js" ></script>
+    <script src="make_table.js"></script>
+    <script src="calculation_sheet.js"></script>
+    <script src="submit_button_fun.js"></script>
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <meta charset="UTF-8">
@@ -34,59 +38,10 @@
 
 <script>
     
-    
-
-      function makeTable(array) 
-      {
-        var table = document.createElement('table');
-        table.setAttribute("border","2");
-        table.setAttribute("align","center");
-        for (var i = 0; i < array.length; i++) {
-          var row = document.createElement('tr');
-            for (var j = 0; j < array[i].length; j++) {
-              var cell = document.createElement('td');
-              cell.textContent = array[i][j];
-              row.appendChild(cell);
-            }
-          table.appendChild(row);
-        }
-        return table;
-      }
+   
 
 
-      // function to submit the excel file for calculation
-function myFunction(){
-
-  readXlsxFile(excel_file.files[0]).then (function(data){
-        //console.log(data);
-        data[0].push("Difference");
-        
-        for  (i= 1 ; i<data.length ; i++){
-          result = data[i];
-          text = result.toString();
-          data[i].push((data[i][(data[i].length-1)]-data[i][(data[i].length-2)]));
-          var arr= new Array()
-          arr[0]=data[0]
-          arr[1]=data[i]
-          tbl=makeTable(arr);
-          // html to pdf download
-          html2pdf().from(tbl).toPdf().save(arr[1][0]);
-     console.log(result);
-     console.log(arr[0][0]);
-
-          
-       }
-      
-        
-           
-        });
-
-
-  // var excel_file = document.getElementById('excel_file');
-  //   excel_file.addEventListener('change', function(){
-        
-  //   })
-}
+ 
     
     
 </script>
