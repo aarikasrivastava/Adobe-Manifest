@@ -1,5 +1,15 @@
 function makeTable(array) 
 {
+  var div=document.createElement('div');
+  var hd=document.createElement('h1');
+  var center=document.createElement('center')
+  var br=document.createElement('br');
+  hd.textContent="Value Realisation Report";
+  center.appendChild(hd);
+  div.appendChild(center);
+  div.appendChild(br);
+  
+
   var table = document.createElement('table');
   table.setAttribute("border","2");
   table.setAttribute("align","center");
@@ -12,5 +22,6 @@ function makeTable(array)
       }
     table.appendChild(row);
   }
-  return table;
+  div.appendChild(table);
+  return div;
 }
