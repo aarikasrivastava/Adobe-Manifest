@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="single_user.js" ></script>
+    <script src="calculation_sheet.js" ></script>
+</head>
+<body>
+    <form >
+        <label for="customer_name">Customer name:</label>
+  <input type="text" id="customer_name" name="fname"><br><br>
+
+  <label for="transaction_id">Transaction Id:</label>
+  <input type="number" id="transaction_id" name="transaction_id"><br><br>
+
+  <label for="value_added">Value Added:</label>
+  <input type="number" id="value_added" name="value_added"><br><br>
+
+  <label for="value_deducted">Value Deducted:</label>
+  <input type="number" id="value_deducted" name="value_deducted"><br><br>
+
+  <input type="button" value="Submit" onclick="displayContent()" />
+    </form>
+</body>
+</html>
