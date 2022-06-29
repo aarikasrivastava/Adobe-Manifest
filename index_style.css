@@ -4,4 +4,10 @@ body {
     background-size: cover;
    }
 
+   .button{
+    align-self: center;
+   }
 
+#inputForm{
+    background-color: #cccccc;
+};
