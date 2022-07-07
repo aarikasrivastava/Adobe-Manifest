@@ -1,9 +1,9 @@
 
 function displayContent () {
-  value_Added = document.getElementById('value_added').value;
- value_Deducted = document.getElementById('value_deducted').value;
-    result = TimeCalculate(value_Added , value_Deducted); 
-  document.write(result);
+  annual_transaction = document.getElementById('totalAnnualTransactions').value;
+  digital_enrollment = document.getElementById('digitalEnrollmentTransactions').value;
+    result = TimeSavingCalculate(annual_transaction , digital_enrollment); 
+  console.log(result);
 
 
 

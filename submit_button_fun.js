@@ -6,8 +6,9 @@
           data[0].push("Result");
           
           for  (i= 1 ; i<data.length ; i++){
+            
             //calling calculate function
-            result = TimeCalculate(data[i][(data[i].length-1)],data[i][(data[i].length-2)]);
+            result = TimeSavingCalculate(data[i][2],data[i][3]);
              data[i].push(result); // pushing the result into report
          
             var arr= new Array()
