@@ -3,11 +3,11 @@
 
     readXlsxFile(excel_file.files[0]).then (function(data){
           //console.log(data);
-          data[0].push("Difference");
+          data[0].push("Result");
           
           for  (i= 1 ; i<data.length ; i++){
             //calling calculate function
-            result = calculate(data[i][(data[i].length-1)],data[i][(data[i].length-2)]);
+            result = TimeCalculate(data[i][(data[i].length-1)],data[i][(data[i].length-2)]);
              data[i].push(result); // pushing the result into report
          
             var arr= new Array()
