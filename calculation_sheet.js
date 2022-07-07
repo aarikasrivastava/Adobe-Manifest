@@ -6,5 +6,5 @@ function TimeCalculate (valueAdded , valueSubtracted){
 function TimeSavingCalculate(Number_of_annual_transactions, Number_of_annual_digital_enrollment){
 
 return parseInt(Number_of_annual_transactions) + parseInt(Number_of_annual_digital_enrollment)
-+parseInt(document.getElementById('timeSpentTransactionsBeforeSign').value);
++parseInt(timeSpentTransactionsBeforeSign);
 }
