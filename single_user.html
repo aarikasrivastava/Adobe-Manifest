@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="single_user.js" ></script>
-    <script src="calculation_sheet.js" ></script>
+    
 
 </head>
 <body style="background-color: rgb(222, 222, 222);">
@@ -41,12 +41,14 @@
             <label for="percentDigitalEnrollmentTransactions">Percentage of digital enrollment transactions leading to customer drop-offs:  </label>
             <input type="text" class="form-control-m mb-2" id="percentDigitalEnrollmentTransactions" name="percentDigitalEnrollmentTransactions"><br><br>
 
-            <label for="printingScanningFaxingSaving">Printing/scanning/faxing cost savings per transaction:  </label>
+            <label for="printingScanningFaxingSaving">Printing/scanning/faxing cost savings per transaction(in $):  </label>
             <input type="text" class="form-control-m mb-2" id="printingScanningFaxingSaving" name="printingScanningFaxingSaving"><br><br>
 
             <input type="button" style="margin: auto;" value="Submit" onclick="displayContent()" />
         </div>
     </form>
 </div>
+
+<script src="calculation_sheet.js" ></script>
 </body>
 </html>
