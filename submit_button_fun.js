@@ -3,16 +3,19 @@
 
     readXlsxFile(excel_file.files[0]).then (function(data){
       //console.log(data);
-      data[0].push("Result");
-data[0].splice(2,2);
+      data[0].push("Time/Enrollment Saving");
+      data[0].push("Incerease in Transaction");
+data[0].splice(2,1);
       
       for  (i= 1 ; i<data.length ; i++){
         
+          Number_of_digital_enrollments = 0.25*data[i][2];
         //calling calculate function
-        result = TimeSavingCalculate(data[i][2],data[i][3]);
+        result = TimeSavingCalculate(data[i][2]);
+        increase_transactions= increasedTransactions(data[i][2]);
          data[i].push(result); // pushing the result into report
-        
-  data[i].splice(2,2);
+         data[i].push(increase_transactions);
+  data[i].splice(2,1);
         var arr= new Array()
         arr[0]=data[0]
         arr[1]=data[i]
