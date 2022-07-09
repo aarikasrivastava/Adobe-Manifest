@@ -1,6 +1,6 @@
 function TimeSavingCalculate(Number_of_annual_transactions){
-TimeSaving_hrs = parseInt(Number_of_annual_transactions)*parseInt(timeSpentTransactionsBeforeSign)*0.25;
-enrollmentSaving_hrs = Number_of_digital_enrollments * timeSpentEnrollmentBeforeSign *0.50 ;
+TimeSaving_hrs = parseInt(Number_of_annual_transactions)*parseInt(timeSavedTransactions)*0.25;
+enrollmentSaving_hrs = Number_of_digital_enrollments * timeSavedEnrollment *0.50 ;
 return TimeSaving_hrs + "/" + enrollmentSaving_hrs;
 }
 
