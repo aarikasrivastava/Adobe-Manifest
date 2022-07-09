@@ -5,6 +5,7 @@
       //console.log(data);
       data[0].push("Time/Enrollment Saving");
       data[0].push("Incerease in Transaction");
+      data[0].push("Time/Enrollment($)");
 data[0].splice(2,1);
       
       for  (i= 1 ; i<data.length ; i++){
@@ -13,8 +14,10 @@ data[0].splice(2,1);
         //calling calculate function
         result = TimeSavingCalculate(data[i][2]);
         increase_transactions= increasedTransactions(data[i][2]);
+        time_enrollment_$ = TimeEnrollment$();
          data[i].push(result); // pushing the result into report
          data[i].push(increase_transactions);
+         data[i].push(time_enrollment_$);
   data[i].splice(2,1);
         var arr= new Array()
         arr[0]=data[0]
