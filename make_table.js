@@ -23,5 +23,6 @@ function makeTable(array)
     table.appendChild(row);
   }
   div.appendChild(table);
+  console.log("Table made");
   return div;
 }
