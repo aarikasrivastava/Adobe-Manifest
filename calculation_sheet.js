@@ -15,3 +15,15 @@ function TimeEnrollment$(){
 return TimeSaving_$ + "/" + EnrollmentSaving_$;
 }
 
+function customerExperienceValue(Number_of_annual_transactions) {
+  a= (reducedDropOffRate *0.01) * parseInt(Number_of_digital_enrollments) * 500 *0.10 ;
+  b= (parseInt(Number_of_annual_transactions) + parseInt(Number_of_digital_enrollments)) * 0.50 *250*0.10 *0.10; 
+  c= (parseInt(Number_of_annual_transactions) * 0.025 * 0.50 * 0.50)* 25*0.50;
+
+  return  (parseInt(a) + parseInt(b)+parseInt(c)) *0.85 ;
+}
+
+function complianceEfficiency(){
+ return ((employeesComplianceRegulatory*hoursSpentEmployeeComplianceRegulatory * 52* percentReductionComplianceRegulatory*0.01) * compensationComplianceRegulatoryStaff *0.85);
+
+}
