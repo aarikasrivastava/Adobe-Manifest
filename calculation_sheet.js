@@ -14,7 +14,20 @@ function TimeEnrollment$(){
  
  TimeSaving_$=  0.80 * (TimeSaving_hrs * 40 * 0.50);
  EnrollmentSaving_$ = (enrollmentSaving_hrs * 25 * 0.50)  * 0.80 ;
-return TimeSaving_$ + "/" + EnrollmentSaving_$;
+ if (USD)
+return TimeSaving_$ +"USD"  + "/" + EnrollmentSaving_$+"USD"; 
+if (EURO) {
+  
+  return (TimeSaving_$*USDtoEURO) +"EURO"  + "/" + (EnrollmentSaving_$ *USDtoEURO)+"EURO"; 
+}
+else if(GBP){
+ 
+  return (TimeSaving_$ * USDtoGBP) +"GBP"  + "/" + (EnrollmentSaving_$ *USDtoGBP)+"GBP"; 
+}
+else if (AUD) {
+ 
+  return (TimeSaving_$ * USDtoAUD) +"AUD"  + "/" + (EnrollmentSaving_$ * USDtoAUD)+"AUD";
+}
 }
 
 function customerExperienceValue(Number_of_annual_transactions) {
@@ -38,7 +51,11 @@ function legacyEfficiency(Number_of_annual_transactions) {
 }
 
 function TotalSavings() {
-  return parseInt(TimeSaving_hrs) + parseInt(enrollmentSaving_hrs) + parseInt(number_increased_transaction)+
-          parseInt(TimeSaving_$) +parseInt(EnrollmentSaving_$) + parseInt(customer_value) + parseInt(compliance) +
-          parseInt(legalEff);
+  Total = parseInt(TimeSaving_hrs) + parseInt(enrollmentSaving_hrs) + parseInt(number_increased_transaction)+
+  parseInt(TimeSaving_$) +parseInt(EnrollmentSaving_$) + parseInt(customer_value) + parseInt(compliance) +
+  parseInt(legalEff);
+  if (USD) return Total+"USD" ; 
+  if(EURO) return Total* USDtoEURO + "EURO" ;
+  if(AUD) return Total * USDtoAUD+ "AUD";
+  if(GBP) return Total * USDtoGBP + "GBP";
 }

@@ -23,6 +23,12 @@ function displayContent () {
   USDtoAUD=document.getElementById('USDtoAUD').value;
   USDtoEURO=document.getElementById('USDtoEURO').value;
   
+  //check for currency 
+
+  if(document.getElementById('USD').checked == true) USD = true; else USD = false;
+  if(document.getElementById('GBP').checked == true) GBP = true; else GBP = false;
+  if(document.getElementById('AUD').checked == true) AUD = true; else AUD =false;
+  if(document.getElementById('EURO').checked == true) EURO = true; else EURO = false;
   
   var arr_new= new Array();
   arr_new[0]=["Customer Name","Transaction Number","Time/Enrollment Saving","Increased Transactions","Time/Enrollment($)","Customer Experience Value","Compliance Efficiency","Legal Efficiency","Total Savings"];

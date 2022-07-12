@@ -20,3 +20,8 @@ var percentCostESign = 25;
 var USDtoGBP=0.766;
 var USDtoAUD=1.345;
 var USDtoEURO=0.918;
+
+USD = true; 
+GBP=false;
+AUD =false;
+EURO = false;
