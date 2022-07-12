@@ -25,7 +25,7 @@ function displayContent () {
   
   
   var arr_new= new Array();
-  arr_new[0]=["Customer Name","Transaction Number","Time/Enrollment Saving","Increased Transactions","Time/Enrollment($)","Customer Experience Value","Compliance Efficiency"];
+  arr_new[0]=["Customer Name","Transaction Number","Time/Enrollment Saving","Increased Transactions","Time/Enrollment($)","Customer Experience Value","Compliance Efficiency","Legal Efficiency","Total Savings"];
   annual_transaction = document.getElementById('totalAnnualTransactions').value;
   Number_of_digital_enrollments= totalDigitalEnrollment * annual_transaction*0.01;
     result = TimeSavingCalculate(annual_transaction); 
@@ -33,8 +33,10 @@ function displayContent () {
     time_enrollment_$= TimeEnrollment$();
     customerExperience=customerExperienceValue(annual_transaction);
     compliance_Efficiency = complianceEfficiency();
+    legal_efficiency = legacyEfficiency(annual_transaction);
+    total_saving = TotalSavings();
 
-  arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString()];
+  arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString(), legal_efficiency.toString(),total_saving.toString()];
   res=makeTable(arr_new);
   html2pdf().from(res).toPdf().save(arr_new[1][0]);
 console.log(arr_new);
@@ -43,5 +45,7 @@ console.log(arr_new);
   console.log( time_enrollment_$);
   console.log(customerExperience);
   console.log(compliance_Efficiency);
+  console.log(legal_efficiency);
+  console.log(total_saving);
  
 }

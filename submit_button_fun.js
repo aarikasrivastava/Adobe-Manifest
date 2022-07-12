@@ -8,6 +8,8 @@
             data[0].push("Time/Enrollment($)");
             data[0].push("Customer Experience Value");
             data[0].push("Compliance Efficiency");
+            data[0].push("Legal Efficiency");
+            data[0].push("Total Savings");
       data[0].splice(2,1);
             
             for  (i= 1 ; i<data.length ; i++){
@@ -19,11 +21,15 @@
               time_enrollment_$ = TimeEnrollment$();
               customerExperience = customerExperienceValue(data[i][2]);
               compliance_efficiency= complianceEfficiency();
+              legal_efficiency = legacyEfficiency(data[i][2]);
+              total_saving = TotalSavings();
                data[i].push(result); // pushing the result into report
                data[i].push(increase_transactions);
                data[i].push(time_enrollment_$);
                data[i].push(customerExperience);
                data[i].push(compliance_efficiency);
+               data[i].push(legal_efficiency);
+               data[i].push(total_saving);
         data[i].splice(2,1);
               var arr= new Array()
               arr[0]=data[0]
@@ -31,7 +37,7 @@
               tbl=makeTable(arr);
               // html to pdf download
               html2pdf().from(tbl).toPdf().save(arr[1][0]);
-         console.log(result);
+         console.log(total_saving);
      
   
             
