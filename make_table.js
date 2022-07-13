@@ -10,6 +10,11 @@ function makeTable(array)
   div.appendChild(br);
   
 
+
+ 
+
+
+
   var table = document.createElement('table');
   table.setAttribute("border","2");
   table.setAttribute("align","center");
