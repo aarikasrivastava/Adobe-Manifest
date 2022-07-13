@@ -29,14 +29,59 @@
 <body>
 
   <!-- navbar -->
-  <nav class="navbar bg-white">
-    <div class="container-lg" >
-      <a class="navbar-brand h1" href="#">
-        <img src="logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-        Manifest
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="fullLogo.png" alt="Logo" width="180"  height="40"  class="d-inline-block align-text-top">
       </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="#" style="font-size: 19px; margin-right: 10px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-size: 19px; margin-right: 10px;">Documentation</a>
+          </li>
+        </ul>
+          
+      
+       
+      
+      </div>
+      <a class="nav-item mr-3 nav-link p-3" href="{% url 'logout' %}" style="font-size: 19px; color: rgb(109, 47, 130);" >Logout</a>
     </div>
+    
   </nav>
+
+
+
+
+  <!-- <nav class="navbar bg-white">
+    <div class="container-sm" >
+      <a class="navbar-brand h1" href="#" style="margin-top: 5px;">
+        <img src="fullLogo.png" alt="Logo" width="180"  height="40"  class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </nav> -->
 
   <div class="container position-absolute top-50 start-50 translate-middle p-5 rounded" 
   style="width:450px; background-color:rgb(241, 247, 247)">
