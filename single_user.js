@@ -44,6 +44,8 @@ function displayContent () {
 
   arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString(), legal_efficiency.toString(),total_saving.toString()];
   res=makeTable(arr_new);
+ 
+ 
   html2pdf().from(res).toPdf().save(arr_new[1][0]);
 console.log(arr_new);
    console.log(result);
