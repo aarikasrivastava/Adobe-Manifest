@@ -3,8 +3,8 @@ function validate () {
     password = document .getElementById('loginPassword').value;
     if (username=='admin' &&  password == 'admin123') 
     {
-        alert("Login Successful");
-        window.location = '/index.html';
+        
+        window.location='\index.html'
         
     }
 else 
