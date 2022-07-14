@@ -20,6 +20,7 @@
     <title>Adobe Manifest </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="results_report.css" type="text/css">
 </head>
 <style type="text/css">
   table, th, td {
@@ -137,6 +138,110 @@ window.addEventListener( "pageshow", function ( event ) {
     window.location.reload();
   }
 });</script>
+<div id="report" style="display: none;">
+    <div class="shadow p-5 mb-10 bg-body" style="
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 3px solid rgb(222, 222, 222);
+    padding: 2px;
+    padding-top: 60px;
+    border-radius: 10px;
+    background-color: #000;"
+   >
+
+   <h2 style="color: white;">Adobe Sign Value Estimate</h2>
+
+        <!-- heading -->
+
+        <label class="totalFinancialImpact"> Total Financial Impact :</label>
+        <label  class="totalFinancialImpact" id="totalFinancialImpact"></label>
+
+
+        <!-- Cards  -->
+        <div class="row" style="width: 100%;">
+            <div class="col-sm-4 d-flex align-items-stretch">
+            <div class="card text-center"   >
+                <div class="card-body">
+                <h5 class="card-title ">Sustainability Savings
+                </h5>
+                <label id="Sustainability Saving"></label>
+                <p class="card-text">Paper, Print, Shipping Cost Saving
+                </p>
+                
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+            <div class="card text-center">
+                <div class="card-body">
+                <h5 class="card-title">Time/Enrollment Savings  (hours)
+                </h5>
+               <label id="TEout"></label>
+                <p class="card-text">Time saved completing transactions/enrollments
+                </p>
+                
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+            <div class="card text-center">
+                <div class="card-body">
+                <h5 class="card-title">Compliance and Legacy Savings
+                </h5>
+               <label id="CLout"></label>
+                <p class="card-text">Savings due to switching from legacy e-signature application to Acrobat Sign
+                </p>
+                
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 20px;">
+            <div class="col-sm-4 d-flex align-items-stretch" >
+            <div class="card text-center">
+                <div class="card-body">
+                <h5 class="card-title">Increased Transactions
+                </h5>
+                <label id="ITout"></label>
+                <p class="card-text">Incremental transactions due to reduced drop off rate
+                </p>
+                
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+            <div class="card text-center">
+                <div class="card-body">
+                <h5 class="card-title">Customer Experience Value
+                </h5>
+                <label id="CEout"></label>
+                <p class="card-text">Profit due to additional transactions, digital enrollments, reduced drop-off and fewer service calls.
+                </p>
+                
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4 d-flex align-items-stretch">
+            <div class="card text-center">
+                <div class="card-body">
+                <h5 class="card-title">Time/Enrollment Savings ($) 
+
+                </h5>
+                <label id="TESout"></label>
+                <p class="card-text">Total time savings from transactions/enrollments
+                </p>
+                
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
 </body>
 </html>
-      

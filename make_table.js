@@ -1,33 +1,16 @@
 function makeTable(array) 
 {
-  var div=document.createElement('div');
-  var hd=document.createElement('h1');
-  var center=document.createElement('center')
-  var br=document.createElement('br');
-  hd.textContent="Value Realisation Report";
-  center.appendChild(hd);
-  div.appendChild(center);
-  div.appendChild(br);
-  
+   
 
+  document.getElementById("totalFinancialImpact").innerHTML=array[1][9];
+  document.getElementById('Sustainability Saving').innerHTML=array[1][8]
+  document.getElementById("TEout").innerHTML=array[1][2];
+  document.getElementById("CLout").innerHTML=array[1][6]+"/"+ array[1][7];
+  document.getElementById("ITout").innerHTML=array[1][3];
+  document.getElementById("CEout").innerHTML=array[1][5];
+  document.getElementById("TESout").innerHTML=array[1][4];
+  var rep=document.getElementById("report").innerHTML;
 
- 
+  return rep;
 
-
-
-  var table = document.createElement('table');
-  table.setAttribute("border","2");
-  table.setAttribute("align","center");
-  for (var i = 0; i < array.length; i++) {
-    var row = document.createElement('tr');
-      for (var j = 0; j < array[i].length; j++) {
-        var cell = document.createElement('td');
-        cell.textContent = array[i][j];
-        row.appendChild(cell);
-      }
-    table.appendChild(row);
-  }
-  div.appendChild(table);
-  console.log("Table made");
-  return div;
 }

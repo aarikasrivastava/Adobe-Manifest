@@ -49,11 +49,20 @@ function legacyEfficiency(Number_of_annual_transactions) {
   legalEff =  (parseInt(f1)+ parseInt((f1*percentCostESign*0.01)) ) * 0.95;
   return legalEff;
 }
-
+function sustainbilitySaving(Number_of_annual_transactions){
+  a1=(parseInt(Number_of_annual_transactions)+ parseInt(Number_of_digital_enrollments)+ parseInt(reducedDropOffRate*0.01 *Number_of_digital_enrollments) + parseInt(number_increased_transaction))*0.80;
+  b1= a1 *0.50 ; 
+  sustainbility = (parseInt(a1 * printingScanningFaxingSaving )+ parseInt(b1*mailingScanningFaxingSaving))*0.85;
+  
+  if (USD) return sustainbility + "USD" ; 
+  if(EURO) return sustainbility*USDtoEURO +"EURO";
+  if(AUD) return sustainbility * USDtoAUD+ "AUD";
+  if(GBP) return sustainbility * USDtoGBP + "GBP";
+}
 function TotalSavings() {
-  Total = parseInt(TimeSaving_hrs) + parseInt(enrollmentSaving_hrs) + parseInt(number_increased_transaction)+
+  Total =
   parseInt(TimeSaving_$) +parseInt(EnrollmentSaving_$) + parseInt(customer_value) + parseInt(compliance) +
-  parseInt(legalEff);
+  parseInt(legalEff) + parseInt(sustainbility);
   if (USD) return Total+"USD" ; 
   if(EURO) return Total* USDtoEURO + "EURO" ;
   if(AUD) return Total * USDtoAUD+ "AUD";
