@@ -2,6 +2,7 @@ body {
     background-image: url("index_background.jpg");
     background-color: #cccccc;
     background-size: cover;
+    font-family: sans-serif;
    }
 
    .button{
