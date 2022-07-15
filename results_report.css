@@ -1,7 +1,7 @@
 .body{
     background-color: rgb(120, 120, 120);
 }
-h2{
+#reportHeading{
     background-color: red;
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -37,4 +37,8 @@ h2{
     color:hotpink ;
     pointer-events: none;
     text-decoration: none;
+}
+
+.formHeading{
+    background-color: none;
 }

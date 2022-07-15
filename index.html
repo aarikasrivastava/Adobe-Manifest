@@ -4,6 +4,7 @@
 
 
     <link rel="stylesheet" href="index_style.css" type="text/css">
+    <link rel="stylesheet" href="results_report.css" type="text/css">
     <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js">  </script> 
     <script src="upload_excel.js" ></script>
     <script src="make_table.js"></script>
@@ -45,7 +46,7 @@
             <a class="nav-link active" aria-current="page" href="#" style="font-size: 19px; margin-right: 10px;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="font-size: 19px; margin-right: 10px;">Documentation</a>
+            <a class="nav-link" onclick="window.location='\documentation.html'" href="#" style="font-size: 19px; margin-right: 10px;">Documentation</a>
           </li>
           
         </div>
@@ -139,109 +140,110 @@ window.addEventListener( "pageshow", function ( event ) {
   }
 });</script>
 <div id="report" style="display: none;">
-    <div class="shadow p-5 mb-10 bg-body" style="
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 3px solid rgb(222, 222, 222);
-    padding: 2px;
-    padding-top: 60px;
-    border-radius: 10px;
-    background-color: #000;"
-   >
+  <div class="shadow p-5 mb-10 bg-body" style="
+  width: 100%;
+  margin: auto;
+  
+  margin-bottom: 10px;
+  
+  padding: 2px;
+  padding-top: 60px;
+  border-radius: 10px;
+  background-color: #000;"
+ >
 
-   <h2 style="color: white;">Adobe Sign Value Estimate</h2>
+ <h2 style="color: white;">Adobe Sign Value Estimate</h2>
 
-        <!-- heading -->
+      <!-- heading -->
 
-        <label class="totalFinancialImpact"> Total Financial Impact :</label>
-        <label  class="totalFinancialImpact" id="totalFinancialImpact"></label>
-
-
-        <!-- Cards  -->
-        <div class="row" style="width: 100%;">
-            <div class="col-sm-4 d-flex align-items-stretch">
-            <div class="card text-center"   >
-                <div class="card-body">
-                <h5 class="card-title ">Sustainability Savings
-                </h5>
-                <label id="Sustainability Saving"></label>
-                <p class="card-text">Paper, Print, Shipping Cost Saving
-                </p>
-                
-                </div>
-            </div>
-            </div>
-            <div class="col-sm-4 d-flex align-items-stretch">
-            <div class="card text-center">
-                <div class="card-body">
-                <h5 class="card-title">Time/Enrollment Savings  (hours)
-                </h5>
-               <label id="TEout"></label>
-                <p class="card-text">Time saved completing transactions/enrollments
-                </p>
-                
-                </div>
-            </div>
-            </div>
-            <div class="col-sm-4 d-flex align-items-stretch">
-            <div class="card text-center">
-                <div class="card-body">
-                <h5 class="card-title">Compliance and Legacy Savings
-                </h5>
-               <label id="CLout"></label>
-                <p class="card-text">Savings due to switching from legacy e-signature application to Acrobat Sign
-                </p>
-                
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="row" style="padding: 20px;">
-            <div class="col-sm-4 d-flex align-items-stretch" >
-            <div class="card text-center">
-                <div class="card-body">
-                <h5 class="card-title">Increased Transactions
-                </h5>
-                <label id="ITout"></label>
-                <p class="card-text">Incremental transactions due to reduced drop off rate
-                </p>
-                
-                </div>
-            </div>
-            </div>
-            <div class="col-sm-4 d-flex align-items-stretch">
-            <div class="card text-center">
-                <div class="card-body">
-                <h5 class="card-title">Customer Experience Value
-                </h5>
-                <label id="CEout"></label>
-                <p class="card-text">Profit due to additional transactions, digital enrollments, reduced drop-off and fewer service calls.
-                </p>
-                
-                </div>
-            </div>
-            </div>
-            <div class="col-sm-4 d-flex align-items-stretch">
-            <div class="card text-center">
-                <div class="card-body">
-                <h5 class="card-title">Time/Enrollment Savings ($) 
-
-                </h5>
-                <label id="TESout"></label>
-                <p class="card-text">Total time savings from transactions/enrollments
-                </p>
-                
-                </div>
-            </div>
-            </div>
-        </div>
+      <label class="totalFinancialImpact" style="margin-left: 20px;" > Total Financial Impact :</label>
+      <label  class="totalFinancialImpact" id="totalFinancialImpact"></label>
 
 
+      <!-- Cards  -->
+      <div class="row" style="margin-bottom: 20px; padding: 20px; padding-bottom: 10px; " >
+          <div class="col-sm-4 d-flex align-items-stretch">
+          <div class="card text-center" style="height: 220px;"  >
+              <div class="card-body">
 
-    </div>
+                  <h5 class="card-title ">Sustainability Savings
+                  </h5>
+                  <label for="card1" id="Sustainability Saving" style="color: red;font-weight: 600;"></label>
+                  <p class="card-text" id="card1" style="margin-top: 20px;">Paper, Print, Shipping Cost Saving
+                  </p>
+              
+              </div>
+          </div>
+          </div>
+          <div class="col-sm-4 d-flex align-items-stretch">
+          <div class="card text-center" style="height: 220px;">
+              <div class="card-body">
+                  <h5 class="card-title">Time/Enrollment Savings  (hours)
+                  </h5>
+              <label for="card2" id="TEout" style="color: red;font-weight: 600;"></label>
+                  <p class="card-text" id="card2" style="margin-top: 15px;">Time saved completing transactions/enrollments
+                  </p>
+              
+              </div>
+          </div>
+          </div>
+          <div class="col-sm-4 d-flex align-items-stretch">
+          <div class="card text-center" style="height: 220px;">
+              <div class="card-body">
+                  <h5 class="card-title">Compliance and Legacy Savings
+                  </h5>
+              <label for="card3" id="CLout" style="color: red;font-weight: 600;"></label>
+                  <p class="card-text" id="card3" style="margin-top: 10px;">Savings due to switching from legacy e-signature application to Acrobat Sign
+                  </p>
+              
+              </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="row" style="padding: 20px;" >
+          <div class="col-sm-4 d-flex align-items-stretch" >
+          <div class="card text-center" style="height: 220px;">
+              <div class="card-body">
+                  <h5 class="card-title">Increased Transactions
+                  </h5>
+                  <label for="card4" id="ITout" style="color: red;font-weight: 600;"></label>
+                  <p class="card-text" id="card4" style="margin-top: 15px;">Incremental transactions due to reduced drop off rate
+                  </p>
+              
+              </div>
+          </div>
+          </div>
+          <div class="col-sm-4 d-flex align-items-stretch">
+          <div class="card text-center" style="height: 220px;">
+              <div class="card-body">
+                  <h5 class="card-title">Customer Experience Value
+                  </h5>
+                  <label for="card5" id="CEout" style="color: red;font-weight: 600;"></label>
+                  <p class="card-text" id="card5">Profit due to additional transactions, digital enrollments, reduced drop-off and fewer service calls.
+                  </p>
+              
+              </div>
+          </div>
+          </div>
+          <div class="col-sm-4 d-flex align-items-stretch">
+          <div class="card text-center" style="height: 220px;">
+              <div class="card-body">
+                  <h5 class="card-title">Time/Enrollment Savings ($) 
+
+                  </h5>
+                  <label for="card6" id="TESout" style="color: red;font-weight: 600;"></label>
+                  <p class="card-text" id="card6" style="margin-top: 15px;">Total time savings from transactions/enrollments
+                  </p>
+              
+              </div>
+          </div>
+          </div>
+      </div>
+
+
+
+  </div>
 </div>
 </body>
 </html>
