@@ -15,7 +15,7 @@ function TimeEnrollment$(){
  TimeSaving_$=  0.80 * (TimeSaving_hrs * 40 * 0.50);
  EnrollmentSaving_$ = (enrollmentSaving_hrs * 25 * 0.50)  * 0.80 ;
  if (USD)
-return TimeSaving_$ +"USD"  + "/" + EnrollmentSaving_$+"USD"; 
+return TimeSaving_$   + " / " + EnrollmentSaving_$+" USD"; 
 if (EURO) {
   
   return (TimeSaving_$*USDtoEURO) +"EURO"  + "/" + (EnrollmentSaving_$ *USDtoEURO)+"EURO"; 
@@ -47,7 +47,7 @@ function complianceEfficiency(){
 function legacyEfficiency(Number_of_annual_transactions) {
   f1 = (parseInt(Number_of_annual_transactions) + parseInt(Number_of_digital_enrollments) +parseInt((Number_of_digital_enrollments*reducedDropOffRate*0.01)) +parseFloat( number_increased_transaction ))*1.2;
   legalEff =  (parseInt(f1)+ parseInt((f1*percentCostESign*0.01)) ) * 0.95;
-  return legalEff;
+  return parseFloat(legalEff).toFixed(2);
 }
 function sustainbilitySaving(Number_of_annual_transactions){
   a1=(parseInt(Number_of_annual_transactions)+ parseInt(Number_of_digital_enrollments)+ parseInt(reducedDropOffRate*0.01 *Number_of_digital_enrollments) + parseInt(number_increased_transaction))*0.80;
