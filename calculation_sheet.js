@@ -18,15 +18,15 @@ function TimeEnrollment$(){
 return TimeSaving_$   + " / " + EnrollmentSaving_$+" USD"; 
 if (EURO) {
   
-  return (TimeSaving_$*USDtoEURO) +"EURO"  + "/" + (EnrollmentSaving_$ *USDtoEURO)+"EURO"; 
+  return (TimeSaving_$*USDtoEURO) + " / " + (EnrollmentSaving_$ *USDtoEURO)+" EURO"; 
 }
 else if(GBP){
  
-  return (TimeSaving_$ * USDtoGBP) +"GBP"  + "/" + (EnrollmentSaving_$ *USDtoGBP)+"GBP"; 
+  return (TimeSaving_$ * USDtoGBP) + " /"  + (EnrollmentSaving_$ *USDtoGBP)+" GBP"; 
 }
 else if (AUD) {
  
-  return (TimeSaving_$ * USDtoAUD) +"AUD"  + "/" + (EnrollmentSaving_$ * USDtoAUD)+"AUD";
+  return (TimeSaving_$ * USDtoAUD)  + " / " + (EnrollmentSaving_$ * USDtoAUD)+" AUD";
 }
 }
 
