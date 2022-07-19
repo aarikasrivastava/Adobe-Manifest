@@ -45,10 +45,11 @@ function displayContent () {
 
   arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString(), legal_efficiency.toString(),sustainbility_saving.toString(), total_saving.toString()];
  
- res=makeTable(arr_new);
-//var element = document.getElementById("report");
-//html2pdf().from(element).toPdf().save();
- html2pdf().from(res).toPdf().save(arr_new[1][0]+"_"+new Date().toLocaleString());
+makeTable(arr_new);
+
+
+
+ //html2pdf().from(res).toPdf().save(arr_new[1][0]+"_"+new Date().toLocaleString());
 console.log(arr_new);
    console.log(result);
   console.log(increased_transactions);

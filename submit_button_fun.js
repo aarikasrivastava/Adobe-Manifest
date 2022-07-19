@@ -37,9 +37,9 @@
               var arr= new Array()
               arr[0]=data[0]
               arr[1]=data[i]
-              tbl=makeTable(arr);
+              makeTable(arr);
               // html to pdf download
-              html2pdf().from(tbl).toPdf().save(arr[1][0]+"_"+new Date().toLocaleString());
+             // html2pdf().from(tbl).toPdf().save(arr[1][0]+"_"+new Date().toLocaleString());
         
      
   
