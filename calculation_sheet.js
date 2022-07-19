@@ -63,8 +63,8 @@ function TotalSavings() {
   Total =
   parseInt(TimeSaving_$) +parseInt(EnrollmentSaving_$) + parseInt(customer_value) + parseInt(compliance) +
   parseInt(legalEff) + parseInt(sustainbility);
-  if (USD) return Total+"USD" ; 
-  if(EURO) return Total* USDtoEURO + "EURO" ;
-  if(AUD) return Total * USDtoAUD+ "AUD";
-  if(GBP) return Total * USDtoGBP + "GBP";
+  if (USD) return Total+" USD" ; 
+  if(EURO) return Total* USDtoEURO + " EURO" ;
+  if(AUD) return Total * USDtoAUD+ " AUD";
+  if(GBP) return Total * USDtoGBP + " GBP";
 }
