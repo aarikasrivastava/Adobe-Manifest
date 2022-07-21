@@ -54,6 +54,7 @@ function Usd(){
     
 }
 function Aud() {
+    USDtoAUD1 = document.getElementById("USDtoAUD").value;
     document.getElementById("mailingScanningFaxingSaving").value=(mailingScanningFaxingSaving1 * USDtoAUD1).toFixed() ; 
     document.getElementById("printingScanningFaxingSaving").value=(printingScanningFaxingSaving1 * USDtoAUD1).toFixed(2);
     document.getElementById("averageCompensationTransactions").value= (averageCompensationTransactions1 * USDtoAUD1).toFixed();
@@ -64,6 +65,7 @@ function Aud() {
 }
 
 function Gbp() {
+    USDtoGBP1=document.getElementById("USDtoGBP").value;
     document.getElementById("mailingScanningFaxingSaving").value=(mailingScanningFaxingSaving1 * USDtoGBP1).toFixed() ; 
     document.getElementById("printingScanningFaxingSaving").value=(printingScanningFaxingSaving1 * USDtoGBP1).toFixed(2);
     document.getElementById("averageCompensationTransactions").value= (averageCompensationTransactions1 * USDtoGBP1).toFixed();
@@ -74,7 +76,7 @@ function Gbp() {
 }
 
 function Euro(){
-
+    USDtoEURO1 =document.getElementById("USDtoEURO").value;
     document.getElementById("mailingScanningFaxingSaving").value=(mailingScanningFaxingSaving1 * USDtoEURO1).toFixed() ; 
     document.getElementById("printingScanningFaxingSaving").value=(printingScanningFaxingSaving1 * USDtoEURO1).toFixed(2);
     document.getElementById("averageCompensationTransactions").value= (averageCompensationTransactions1 * USDtoEURO1).toFixed();
