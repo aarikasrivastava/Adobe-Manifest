@@ -38,7 +38,7 @@
     margin: auto;
     margin-top: 60px;
     margin-bottom: 40px;
-    width: 68%;
+    width: 60%;
     border: 3px solid rgb(222, 222, 222);
     padding: 50px;
     padding-top: 60px;
@@ -52,66 +52,93 @@
 
 
     <div class="form-group">
-        
-        <label for="customerName">Name of the customer:  </label>
-        <input type="text" class="form-control-m mb-2" id="customerName" name="customerName"><br>
 
-        <label for="totalAnnualTransactions">Number of annual transactions:  </label>
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end">
+            <label id="formLabel" for="customerName" >Name of the customer:  </label>
+            <input type="text" class="form-control-m mb-2"  id="customerName" name="customerName"><br>
+        </div>
+        
+        
+
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end">
+        <label id="formLabel" for="totalAnnualTransactions">Number of annual transactions:  </label>
         <input type="number" class="form-control-m mb-2" id="totalAnnualTransactions" name="totalAnnualTransactions"><br>
+    </div>
 
-        <label for="digitalEnrollmentTransactions">Percentage of annual digital enrollment transactions:  </label>
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="digitalEnrollmentTransactions">Percentage of annual digital enrollment transactions:  </label>
         <input type="number" class="form-control-m mb-2" id="digitalEnrollmentTransactions"  name="digitalEnrollmentTransactions"><br>
-
+        </div>
         
-
-        <label for="timeSavedTransactions">Average time savings for employees per transaction(hours):  </label>
+    <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="timeSavedTransactions">Average time savings for employees per transaction(hours):  </label>
         <input type="number" class="form-control-m mb-2" id="timeSavedTransactions" name="timeSavedTransactions"><br>
-
-        <label for="timeSavedEnrollment">Average time savings per digital enrollment(hours):  </label>
+    </div>
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="timeSavedEnrollment">Average time savings per digital enrollment(hours):  </label>
         <input type="number" class="form-control-m mb-2" id="timeSavedEnrollment" name="timeSavedEnrollment"><br>
-
+        </div>
         <!-- <label for="percentDigitalEnrollmentTransactions">Percentage of digital enrollment transactions leading to customer drop-offs:  </label>
         <input type="number" class="form-control-m mb-2" id="percentDigitalEnrollmentTransactions" name="percentDigitalEnrollmentTransactions"><br><br> -->
-
-        <label for="printingScanningFaxingSaving">Printing/scanning/faxing cost savings per transaction(in $):  </label>
+            <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="printingScanningFaxingSaving">Printing/scanning/faxing cost savings per transaction(in $):  </label>
         <input type="number" class="form-control-m mb-2" id="printingScanningFaxingSaving" name="printingScanningFaxingSaving"><br>
-
-        <label for="mailingScanningFaxingSaving">Mailing/shipping cost savings, per transaction(in $):  </label>
+            </div>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="mailingScanningFaxingSaving">Mailing/shipping cost savings, per transaction(in $):  </label>
         <input type="number" class="form-control-m mb-2" id="mailingScanningFaxingSaving" name="mailingScanningFaxingSaving"><br>
+        </div>
 
-        
-        <label for="averageCompensationTransactions">Average hourly fully loaded compensation, end user for transactions(in $):  </label>
+            <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label  for="averageCompensationTransactions">Average hourly fully loaded compensation, end user for transactions(in $):  </label>
         <input type="number" class="form-control-m mb-2" id="averageCompensationTransactions" name="averageCompensationTransactions"><br>
-
-        <label for="averageCompensationEnrollments">Average hourly fully loaded compensation, end user for digital enrollments(in $):  </label>
-        <input type="number" class="form-control-m mb-2" id="averageCompensationEnrollments" name="averageCompensationEnrollments"><br>
-
-
-
-        <label for="reducedDropOffRate">Reduction in drop off rate due to digitization of processes(in %):  </label>
-        <input type="number" class="form-control-m mb-2" id="reducedDropOffRate" name="reducedDropOffRate"><br>
-
-        <label for="avgRevenuePerTrans">Average revenue per transaction(in $):  </label>
-        <input type="number" class="form-control-m mb-2" id="avgRevenuePerTrans" name="avgRevenuePerTrans"><br>
-
-        <label for="avgPagesPerTransaction">Average number of pages per transaction:  </label>
-        <input type="number" class="form-control-m mb-2" id="avgPagesPerTransaction" name="avgPagesPerTransaction"><br>
-
-        <label for="employeesComplianceRegulatory">Employees working on compliance and regulatory reviews:  </label>
-        <input type="number" class="form-control-m mb-2" id="employeesComplianceRegulatory" name="employeesComplianceRegulatory"><br>
-
-        <label for="hoursSpentEmployeeComplianceRegulatory">Hours per employee per week spent on compliance and regulatory reviews:  </label>
-        <input type="number" class="form-control-m mb-2" id="hoursSpentEmployeeComplianceRegulatory" name="hoursSpentEmployeeComplianceRegulatory"><br>
+            </div>    <br>
         
-        <label for="percentReductionComplianceRegulatory">Percentage reduction in time spent on compliance and regulatory reviews:  </label>
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label  for="averageCompensationEnrollments">Average hourly fully loaded compensation, end user for digital enrollments(in $):  </label>
+        <input type="number" class="form-control-m mb-2" id="averageCompensationEnrollments" name="averageCompensationEnrollments"><br>
+        </div><br>
+
+            <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="reducedDropOffRate">Reduction in drop off rate due to digitization of processes(in %):  </label>
+        <input type="number" class="form-control-m mb-2" id="reducedDropOffRate" name="reducedDropOffRate"><br>
+            </div>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="avgRevenuePerTrans">Average revenue per transaction(in $):  </label>
+        <input type="number" class="form-control-m mb-2" id="avgRevenuePerTrans" name="avgRevenuePerTrans"><br>
+        </div>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="avgPagesPerTransaction">Average number of pages per transaction:  </label>
+        <input type="number" class="form-control-m mb-2" id="avgPagesPerTransaction" name="avgPagesPerTransaction"><br>
+        </div>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label id="formLabel" for="employeesComplianceRegulatory">Employees working on compliance and regulatory reviews:  </label>
+        <input type="number" class="form-control-m mb-2" id="employeesComplianceRegulatory" name="employeesComplianceRegulatory"><br>
+        </div>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label  for="hoursSpentEmployeeComplianceRegulatory">Hours per employee per week spent on compliance and regulatory reviews:  </label>
+        <input type="number" class="form-control-m mb-2" id="hoursSpentEmployeeComplianceRegulatory" name="hoursSpentEmployeeComplianceRegulatory"><br>
+        </div><br>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label  for="percentReductionComplianceRegulatory">Percentage reduction in time spent on compliance and regulatory reviews:  </label>
         <input type="number" class="form-control-m mb-2" id="percentReductionComplianceRegulatory" name="percentReductionComplianceRegulatory"><br>
-
-        <label for="compensationComplianceRegulatoryStaff">Average hourly fully loaded compensation for a compliance and regulatory staff member(in $):  </label>
+        </div><br>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label  for="compensationComplianceRegulatoryStaff">Average hourly fully loaded compensation for a compliance and regulatory staff member(in $):  </label>
         <input type="number" class="form-control-m mb-2" id="compensationComplianceRegulatoryStaff" name="compensationComplianceRegulatoryStaff"><br>
-
-        <label for="percentCostESign">How much more would the legacy e-signature solution cost to accomplish the same transaction volume?(in %):</label>
+        </div><br>
+        
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+        <label  for="percentCostESign">How much more would the legacy e-signature solution cost to accomplish the same transaction volume?(in %):</label>
         <input type="number" class="form-control-m mb-2" id="percentCostESign" name="percentCostESign"><br><br>
-
+        </div><br>
 
         <!-- For currency selection -->
         <label for="btn-group btn-group-toggle"> Select currency:</label><br>

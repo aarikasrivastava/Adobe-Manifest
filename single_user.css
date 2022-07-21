@@ -3,3 +3,13 @@ label{
     font-family: sans-serif;
 
 }
+.form-control-m{
+    
+    margin-left: auto;
+    margin-right: 0px;
+
+}
+
+#formLabel{
+    margin-bottom: 10px;
+}
