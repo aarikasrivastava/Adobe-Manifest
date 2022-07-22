@@ -16,6 +16,8 @@ var percentReductionComplianceRegulatory = 25;
 var compensationComplianceRegulatoryStaff = 60;
 var percentCostESign = 25;
 
+var costPerTransaction = 1.2;
+var additionalTransaction = 250;
 
 var USDtoGBP=0.766;
 var USDtoAUD=1.345;

@@ -30,6 +30,11 @@ function displayContent () {
   if(document.getElementById('AUD').checked == true) AUD = true; else AUD =false;
   if(document.getElementById('EURO').checked == true) EURO = true; else EURO = false;
   
+
+  // document.getElementById('USDtoGBP').addEventListener("click", function(){ console.log("Hello World!"); });
+
+  
+
   var arr_new= new Array();
   arr_new[0]=["Customer Name","Transaction Number","Time/Enrollment Saving","Increased Transactions","Time/Enrollment($)","Customer Experience Value","Compliance Efficiency","Legal Efficiency","Sustainbility Savings","Total Savings"];
   annual_transaction = document.getElementById('totalAnnualTransactions').value;

@@ -16,6 +16,9 @@ var percentReductionComplianceRegulatory1 = 25;
 var compensationComplianceRegulatoryStaff1 = 60;
 var percentCostESign1 = 25;
 
+var costPerTransaction1 = 1.2;
+var additionalTransaction1 = 250;
+
 
 var USDtoGBP1=0.766;
 var USDtoAUD1=1.345;
@@ -38,6 +41,9 @@ document.getElementById("hoursSpentEmployeeComplianceRegulatory").value=hoursSpe
 document.getElementById("percentReductionComplianceRegulatory").value=percentReductionComplianceRegulatory1;
 document.getElementById("compensationComplianceRegulatoryStaff").value=compensationComplianceRegulatoryStaff1;
 document.getElementById("percentCostESign").value=percentCostESign1;
+
+document.getElementById("costPerTransaction").value=costPerTransaction1;
+document.getElementById("additionalTransaction").value=additionalTransaction1;
 
 
 

@@ -53,17 +53,61 @@
 
     <div class="form-group">
 
-        <div style="display: flex; align-items:flex-end; justify-content:flex-end">
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end" >
             <label id="formLabel" for="customerName" >Name of the customer:  </label>
-            <input type="text" class="form-control-m mb-2"  id="customerName" name="customerName"><br>
+            <input type="text" class="form-control-m mb-2"  id="customerName" required name="customerName"><br>
         </div>
         
         
 
         <div style="display: flex; align-items:flex-end; justify-content:flex-end">
         <label id="formLabel" for="totalAnnualTransactions">Number of annual transactions:  </label>
-        <input type="number" class="form-control-m mb-2" id="totalAnnualTransactions" name="totalAnnualTransactions"><br>
+        <input type="number" class="form-control-m mb-2" id="totalAnnualTransactions" required name="totalAnnualTransactions"><br>
+    </div><br>
+
+    <!-- For currency selection -->
+    <div class="input-group input-group-sm mb-3">
+
+        <label for="USDtoGBP" style="display: flex; justify-content: center;align-items: center;font-size: 15px;margin: 3px;">USD to GBP:</label>
+        <input type="number" class="form-control" id="USDtoGBP" name="USDtoGBP">
+        <script> </script>
+
+        <label for="USDtoAUD" style="display: flex; justify-content: center;align-items: center;font-size: 15px;margin: 3px;">USD to AUD:</label>
+        <input type="number" class="form-control" id="USDtoAUD" name="USDtoAUD"  value="">
+        <script> </script>
+
+        <label for="USDtoEURO" style="display: flex; justify-content: center;align-items: center;font-size: 15px; margin: 3px;">USD to EURO:</label>
+        <input type="number" class="form-control" id="USDtoEURO" name="USDtoEURO"  value="">
+        
+
     </div>
+
+
+    <label for="btn-group btn-group-toggle"> Select currency:</label><br>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" required>
+        
+        <label class="btn btn-secondary">
+        <input type="radio" name="options" id="USD" autocomplete="off" checked onclick="Usd()"> USD
+        </label>
+
+        <label class="btn btn-secondary">
+        <input type="radio" name="options" id="AUD" autocomplete="off" onclick="Aud()"> AUD
+        </label>
+
+        <label class="btn btn-secondary">
+        <input type="radio" name="options" id="GBP" autocomplete="off" onclick="Gbp()"> GBP
+        </label>
+
+        <label class="btn btn-secondary ">
+        <input type="radio" name="options" id="EURO" autocomplete="off" onclick="Euro()"> EURO
+        </label>
+        
+
+
+
+    </div><br><br>
+
+    <div style="font-size:  large; font-weight: 500; margin-bottom: 20px;">Assumptions:</div>
 
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
         <label id="formLabel" for="digitalEnrollmentTransactions">Percentage of annual digital enrollment transactions:  </label>
@@ -71,42 +115,42 @@
         </div>
         
     <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label id="formLabel" for="timeSavedTransactions">Average time savings for employees per transaction(hours):  </label>
+        <label id="formLabel" for="timeSavedTransactions">Average time savings for employees per transaction (hours):  </label>
         <input type="number" class="form-control-m mb-2" id="timeSavedTransactions" name="timeSavedTransactions"><br>
     </div>
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label id="formLabel" for="timeSavedEnrollment">Average time savings per digital enrollment(hours):  </label>
+        <label id="formLabel" for="timeSavedEnrollment">Average time savings per digital enrollment (hours):  </label>
         <input type="number" class="form-control-m mb-2" id="timeSavedEnrollment" name="timeSavedEnrollment"><br>
         </div>
         <!-- <label for="percentDigitalEnrollmentTransactions">Percentage of digital enrollment transactions leading to customer drop-offs:  </label>
         <input type="number" class="form-control-m mb-2" id="percentDigitalEnrollmentTransactions" name="percentDigitalEnrollmentTransactions"><br><br> -->
             <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label id="formLabel" for="printingScanningFaxingSaving">Printing/scanning/faxing cost savings per transaction(in $):  </label>
+        <label id="formLabel" for="printingScanningFaxingSaving">Printing/scanning/faxing cost savings per transaction (in $/€/£):  </label>
         <input type="number" class="form-control-m mb-2" id="printingScanningFaxingSaving" name="printingScanningFaxingSaving"><br>
             </div>
         
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label id="formLabel" for="mailingScanningFaxingSaving">Mailing/shipping cost savings, per transaction(in $):  </label>
+        <label id="formLabel" for="mailingScanningFaxingSaving">Mailing/shipping cost savings, per transaction (in $/€/£):  </label>
         <input type="number" class="form-control-m mb-2" id="mailingScanningFaxingSaving" name="mailingScanningFaxingSaving"><br>
         </div>
 
             <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label  for="averageCompensationTransactions">Average hourly fully loaded compensation, end user for transactions(in $):  </label>
+        <label  for="averageCompensationTransactions">Average hourly fully loaded compensation, end user for transactions (in $/€/£):  </label>
         <input type="number" class="form-control-m mb-2" id="averageCompensationTransactions" name="averageCompensationTransactions"><br>
             </div>    <br>
         
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label  for="averageCompensationEnrollments">Average hourly fully loaded compensation, end user for digital enrollments(in $):  </label>
+        <label  for="averageCompensationEnrollments">Average hourly fully loaded compensation, end user for digital enrollments (in $/€/£):  </label>
         <input type="number" class="form-control-m mb-2" id="averageCompensationEnrollments" name="averageCompensationEnrollments"><br>
         </div><br>
 
             <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label id="formLabel" for="reducedDropOffRate">Reduction in drop off rate due to digitization of processes(in %):  </label>
+        <label id="formLabel" for="reducedDropOffRate">Reduction in drop off rate due to digitization of processes (in %):  </label>
         <input type="number" class="form-control-m mb-2" id="reducedDropOffRate" name="reducedDropOffRate"><br>
             </div>
         
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label id="formLabel" for="avgRevenuePerTrans">Average revenue per transaction(in $):  </label>
+        <label id="formLabel" for="avgRevenuePerTrans">Average revenue per transaction (in $/€/£):  </label>
         <input type="number" class="form-control-m mb-2" id="avgRevenuePerTrans" name="avgRevenuePerTrans"><br>
         </div>
         
@@ -131,57 +175,34 @@
         </div><br>
         
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label  for="compensationComplianceRegulatoryStaff">Average hourly fully loaded compensation for a compliance and regulatory staff member(in $):  </label>
+        <label  for="compensationComplianceRegulatoryStaff">Average hourly fully loaded compensation for a compliance and regulatory staff member (in $/€/£):  </label>
         <input type="number" class="form-control-m mb-2" id="compensationComplianceRegulatoryStaff" name="compensationComplianceRegulatoryStaff"><br>
         </div><br>
         
         <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
-        <label  for="percentCostESign">How much more would the legacy e-signature solution cost to accomplish the same transaction volume?(in %):</label>
-        <input type="number" class="form-control-m mb-2" id="percentCostESign" name="percentCostESign"><br><br>
+        <label  for="percentCostESign">How much more would the legacy e-signature solution cost to accomplish the same transaction volume? (in %):</label>
+        <input type="number" class="form-control-m mb-2" id="percentCostESign" name="percentCostESign"><br>
         </div><br>
 
-        <!-- For currency selection -->
-        <label for="btn-group btn-group-toggle"> Select currency:</label><br>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            
-            <label class="btn btn-secondary">
-            <input type="radio" name="options" id="USD" autocomplete="off" checked onclick="Usd()"> USD
-            </label>
+        <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+            <label id="formLabel" for="costPerTransaction">Cost per transaction (in $/€/£):  </label>
+            <input type="number" class="form-control-m mb-2" id="costPerTransaction" name="costPerTransaction"><br>
+            </div>
 
-            <label class="btn btn-secondary">
-            <input type="radio" name="options" id="AUD" autocomplete="off" onclick="Aud()"> AUD
-            </label>
+            <div style="display: flex; align-items:flex-end; justify-content:flex-end;">
+                <label id="formLabel" for="additionalTransaction">Average value of additional transaction (in $/€/£):  </label>
+                <input type="number" class="form-control-m mb-2" id="additionalTransaction" name="additionalTransaction"><br>
+                </div><br>
 
-            <label class="btn btn-secondary">
-            <input type="radio" name="options" id="GBP" autocomplete="off" onclick="Gbp()"> GBP
-            </label>
+        
 
-            <label class="btn btn-secondary ">
-            <input type="radio" name="options" id="EURO" autocomplete="off" onclick="Euro()"> EURO
-            </label>
-
-
-
-        </div><br><br>
+        
+       
 
 
         <!-- Currency values -->
 
-          <div class="input-group input-group-sm mb-3">
-
-            <label for="USDtoGBP" style="display: flex; justify-content: center;align-items: center;font-size: 15px;margin: 3px;">USD to GBP:</label>
-            <input type="number" class="form-control" id="USDtoGBP" name="USDtoGBP">
-            <script> document.getElementById('USDtoGBP').addEventListener("change", Gbp )</script>
-
-            <label for="USDtoAUD" style="display: flex; justify-content: center;align-items: center;font-size: 15px;margin: 3px;">USD to AUD:</label>
-            <input type="number" class="form-control" id="USDtoAUD" name="USDtoAUD" value="">
-            <script> document.getElementById('USDtoGBP').addEventListener("change", Aud )</script>
-
-            <label for="USDtoEURO" style="display: flex; justify-content: center;align-items: center;font-size: 15px; margin: 3px;">USD to EURO:</label>
-            <input type="number" class="form-control" id="USDtoEURO" name="USDtoEURO" value="">
-            <script> document.getElementById('USDtoGBP').addEventListener("change", Euro )</script>
-
-          </div>
+          
           
 
 
@@ -199,5 +220,18 @@
 
 <script src="calculation_sheet.js" ></script>
 <script src="calculation_util_single.js"></script>
+<script> 
+    document.getElementById('USDtoGBP').addEventListener("click", changeCurrencyFactor)
+    document.getElementById('USDtoAUD').addEventListener("click", changeCurrencyFactor)
+    document.getElementById('USDtoEURO').addEventListener("click", changeCurrencyFactor)
+
+    function changeCurrencyFactor(){
+        
+        document.getElementById('USD').checked = false;
+        document.getElementById('GBP').checked = false;
+        document.getElementById('AUD').checked = false;
+        document.getElementById('EURO').checked = false;
+    }
+    </script>
 </body>
 </html>
