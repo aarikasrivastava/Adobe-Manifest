@@ -3,7 +3,17 @@ function makeTable(arr)
    
   let pptx = new PptxGenJS();
   let slide = pptx.addSlide();
-  slide.addImage({ path: "image.jpeg",  w: 10 , h:5.5});
+  slide.addImage({ path: "PPTimg.png",  w: 10 , h:5.5});
+
+
+  slide.addText("Total Financial Impact: ", { x: 0.2, y: 1, fontFace: "Arial", fontSize: 18, color: "#FF0000", bold: true, italic: false, underline: false });
+  slide.addText("Sustainability Savings", { x: 0.8, y: 1.55, fontFace: "Arial", fontSize: 13, color: "#000000", bold: false, italic: false, underline: false });
+  slide.addText("Time/Enrollment Savings (hours)", { x: 3.7, y: 1.55, fontFace: "Arial", fontSize: 13, color: "#000000", bold: false, italic: false, underline: false });
+  slide.addText("Time/Enrollment Savings ($)", { x: 7, y: 1.55, fontFace: "Arial", fontSize: 13, color: "#000000", bold: false, italic: false, underline: false });
+
+  slide.addText("Increased Transactions", { x: 0.8, y: 3.33, fontFace: "Arial", fontSize: 13, color: "#000000", bold: false, italic: false, underline: false });
+  slide.addText("Customer Experience Value", { x: 3.8, y: 3.33, fontFace: "Arial", fontSize: 13, color: "#000000", bold: false, italic: false, underline: false });
+  slide.addText("Compliance and Legacy Savings", { x: 6.9, y: 3.33, fontFace: "Arial", fontSize: 13, color: "#000000", bold: false, italic: false, underline: false });
 
         slide.addText(arr[1][9], { x: 3, y: 1, fontFace: "Arial", fontSize: 18, color: "#FF0000", bold: true, italic: false, underline: false });
 
