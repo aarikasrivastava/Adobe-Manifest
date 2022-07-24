@@ -57,7 +57,9 @@ function Usd(){
     document.getElementById("averageCompensationEnrollments").value=(averageCompensationEnrollments1 ) .toFixed();
     document.getElementById("avgRevenuePerTrans").value=(avgRevenuePerTrans1).toFixed();
     document.getElementById("compensationComplianceRegulatoryStaff").value=(compensationComplianceRegulatoryStaff1).toFixed();
-    
+    document.getElementById("costPerTransaction").value= costPerTransaction1.toFixed(1); 
+    document.getElementById("additionalTransaction").value=additionalTransaction1.toFixed(1);
+
 }
 function Aud() {
     USDtoAUD1 = document.getElementById("USDtoAUD").value;
@@ -67,6 +69,8 @@ function Aud() {
     document.getElementById("averageCompensationEnrollments").value=(averageCompensationEnrollments1 * USDtoAUD1) .toFixed();
     document.getElementById("avgRevenuePerTrans").value=(avgRevenuePerTrans1*USDtoAUD1).toFixed();
     document.getElementById("compensationComplianceRegulatoryStaff").value=(compensationComplianceRegulatoryStaff1*USDtoAUD1).toFixed();
+    document.getElementById("costPerTransaction").value= (costPerTransaction1*USDtoAUD1).toFixed(1); 
+    document.getElementById("additionalTransaction").value=(additionalTransaction1*USDtoAUD1).toFixed(1);
     
 }
 
@@ -78,6 +82,8 @@ function Gbp() {
     document.getElementById("averageCompensationEnrollments").value=(averageCompensationEnrollments1 * USDtoGBP1) .toFixed();
     document.getElementById("avgRevenuePerTrans").value=(avgRevenuePerTrans1*USDtoGBP1).toFixed();
     document.getElementById("compensationComplianceRegulatoryStaff").value=(compensationComplianceRegulatoryStaff1*USDtoGBP1).toFixed();
+    document.getElementById("costPerTransaction").value= (costPerTransaction1*USDtoGBP1).toFixed(1); 
+    document.getElementById("additionalTransaction").value=(additionalTransaction1*USDtoGBP1).toFixed(1);
     
 }
 
@@ -89,6 +95,8 @@ function Euro(){
     document.getElementById("averageCompensationEnrollments").value=(averageCompensationEnrollments1 * USDtoEURO1) .toFixed();
     document.getElementById("avgRevenuePerTrans").value=(avgRevenuePerTrans1*USDtoEURO1).toFixed();
     document.getElementById("compensationComplianceRegulatoryStaff").value=(compensationComplianceRegulatoryStaff1*USDtoEURO1).toFixed();
+    document.getElementById("costPerTransaction").value= (costPerTransaction1*USDtoEURO1).toFixed(1); 
+    document.getElementById("additionalTransaction").value=(additionalTransaction1*USDtoEURO1).toFixed(1);
     
 
 }

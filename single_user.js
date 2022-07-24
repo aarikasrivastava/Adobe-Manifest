@@ -18,6 +18,10 @@ function displayContent () {
   percentReductionComplianceRegulatory=document.getElementById('percentReductionComplianceRegulatory').value;
   compensationComplianceRegulatoryStaff=document.getElementById('compensationComplianceRegulatoryStaff').value;
   percentCostESign=document.getElementById('percentCostESign').value;
+
+  costPerTransaction = document.getElementById('costPerTransaction').value;
+  additionalTransaction=document.getElementById ('additionalTransaction').value;
+  
   
   USDtoGBP=document.getElementById('USDtoGBP').value;
   USDtoAUD=document.getElementById('USDtoAUD').value;
