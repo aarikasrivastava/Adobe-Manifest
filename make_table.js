@@ -2,6 +2,37 @@ function makeTable(arr,assumptions)
 {
    
   let pptx = new PptxGenJS();
+
+  let slide2 = pptx.addSlide();
+  slide2.addImage({ path: "Slide2Background.png",  w: 10 , h:5.55});
+
+
+  let rows = [["Percentage of annual digital enrollment transactions:",assumptions[0][0]],
+            ["Mailing/shipping cost savings, per transaction (in $/€/£):",assumptions[0][1]],
+            ["Printing/scanning/faxing cost savings per transaction (in $/€/£):",assumptions[0][2]],
+            ["Average time savings for employees per transaction (hours):",assumptions[0][3]],
+            ["Average time savings per digital enrollment (hours):",assumptions[0][4]],
+            ["Average hourly fully loaded compensation, end user for transactions (in $/€/£):",assumptions[0][5]],
+            ["Average hourly fully loaded compensation, end user for digital enrollments (in $/€/£):",assumptions[0][6]],
+            ["Reduction in drop off rate due to digitization of processes (in %):",assumptions[0][7]],
+            ["Average revenue per transaction (in $/€/£):",assumptions[0][8]],
+            ["Average number of pages per transaction:",assumptions[0][9]],
+            ["Employees working on compliance and regulatory reviews:",assumptions[0][10]],
+            ["Hours per employee per week spent on compliance and regulatory reviews:",assumptions[0][11]],
+            ["Percentage reduction in time spent on compliance and regulatory reviews:",assumptions[0][12]],
+            ["Average hourly fully loaded compensation for a compliance and regulatory staff member (in $/€/£):",assumptions[0][13]],
+            ["How much more would the legacy e-signature solution cost to accomplish the same transaction volume? (in %):",assumptions[0][14]]];
+            
+  let heading = [["Assumption Label", "Assumptions"]]; 
+            slide2.addTable(heading,{x:0.9, y:0.7, colW:[7,1.3] , bold: true}),
+            slide2.addTable(rows, {x:0.7, y:1,rowH:0.1, colW:[7.5,1.3], fontSize:11  });
+
+            slide2.addText("curr", {x: 6.4, y: 0.3, color:'ffff00'})
+
+
+
+
+// VR slide
   let slide = pptx.addSlide();
   slide.addImage({ path: "PPTimg.png",  w: 10 , h:5.55});
 
