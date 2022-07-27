@@ -1,4 +1,4 @@
-function makeTable(arr) 
+function makeTable(arr,assumptions) 
 {
    
   let pptx = new PptxGenJS();

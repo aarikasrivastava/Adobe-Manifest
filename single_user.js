@@ -36,7 +36,8 @@ function displayContent () {
   
 
   // document.getElementById('USDtoGBP').addEventListener("click", function(){ console.log("Hello World!"); });
-
+var assumptions = new Array();
+assumptions[0]= [mailingScanningFaxingSaving.toString() , printingScanningFaxingSaving.toString() ,timeSavedTransactions.toString() , timeSavedEnrollment.toString(),averageCompensationTransactions.toString() ,averageCompensationEnrollments.toString() ,reducedDropOffRate.toString() , avgRevenuePerTrans.toString(),avgPagesPerTransaction.toString() , employeesComplianceRegulatory,toString() , hoursSpentEmployeeComplianceRegulatory.toString() , percentReductionComplianceRegulatory.toString() , compensationComplianceRegulatoryStaff.toString() ,percentCostESign.toString()]
   
 
   var arr_new= new Array();
@@ -54,7 +55,7 @@ function displayContent () {
 
   arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString(), legal_efficiency.toString(),sustainbility_saving.toString(), total_saving.toString()];
  
-makeTable(arr_new);
+makeTable(arr_new,assumptions);
 
 
 
