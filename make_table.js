@@ -1,4 +1,4 @@
-function makeTable(arr,assumptions) 
+function makeTable(arr,assumptions,curr) 
 {
    
   let pptx = new PptxGenJS();
@@ -27,7 +27,7 @@ function makeTable(arr,assumptions)
             slide2.addTable(heading,{x:0.9, y:0.7, colW:[7,1.3] , bold: true}),
             slide2.addTable(rows, {x:0.7, y:1,rowH:0.1, colW:[7.5,1.3], fontSize:11  });
 
-            slide2.addText("curr", {x: 6.4, y: 0.3, color:'ffff00'})
+            slide2.addText(curr, {x: 6.4, y: 0.3, color:'ffff00'})
 
 
 

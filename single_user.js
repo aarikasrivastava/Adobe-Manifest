@@ -28,11 +28,28 @@ function displayContent () {
   USDtoEURO=document.getElementById('USDtoEURO').value;
   
   //check for currency 
+var curr
+  if(document.getElementById('USD').checked == true) {
+    USD = true; 
+    curr = "USD"
+  }
 
-  if(document.getElementById('USD').checked == true) USD = true; else USD = false;
-  if(document.getElementById('GBP').checked == true) GBP = true; else GBP = false;
-  if(document.getElementById('AUD').checked == true) AUD = true; else AUD =false;
-  if(document.getElementById('EURO').checked == true) EURO = true; else EURO = false;
+  else USD = false;
+  if(document.getElementById('GBP').checked == true)
+  {
+    curr = "GBP"
+    GBP = true; 
+  } else GBP = false;
+  if(document.getElementById('AUD').checked == true) 
+  {curr = "AUD"
+    AUD = true;
+   } else AUD =false;
+  if(document.getElementById('EURO').checked == true) {
+    curr = "EURO"
+    EURO = true;
+     
+  }
+  else EURO = false;
   
 
   // document.getElementById('USDtoGBP').addEventListener("click", function(){ console.log("Hello World!"); });
@@ -59,7 +76,7 @@ avgPagesPerTransaction.toString() , employeesComplianceRegulatory.toString() , h
 
   arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString(), legal_efficiency.toString(),sustainbility_saving.toString(), total_saving.toString()];
  
-makeTable(arr_new,assumptions);
+makeTable(arr_new,assumptions,curr);
 
 
 

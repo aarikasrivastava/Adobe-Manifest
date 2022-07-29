@@ -27,3 +27,5 @@ USD = true;
 GBP=false;
 AUD =false;
 EURO = false;
+
+var curr = "USD"; 

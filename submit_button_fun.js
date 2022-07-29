@@ -34,13 +34,13 @@
                data[i].push(sustainbility_savings);
                data[i].push(total_saving);
         //data[i].splice(2,1);
-
+                  var curr = "USD"
         var assumptions = new Array();
 assumptions[0]= [mailingScanningFaxingSaving.toString() , printingScanningFaxingSaving.toString() ,timeSavedTransactions.toString() , timeSavedEnrollment.toString(),averageCompensationTransactions.toString() ,averageCompensationEnrollments.toString() ,reducedDropOffRate.toString() , avgRevenuePerTrans.toString(),avgPagesPerTransaction.toString() , employeesComplianceRegulatory,toString() , hoursSpentEmployeeComplianceRegulatory.toString() , percentReductionComplianceRegulatory.toString() , compensationComplianceRegulatoryStaff.toString() ,percentCostESign.toString()]
               var arr= new Array()
               arr[0]=data[0]
               arr[1]=data[i]
-              makeTable(arr,assumptions);
+              makeTable(arr,assumptions,curr);
               // html to pdf download
              // html2pdf().from(tbl).toPdf().save(arr[1][0]+"_"+new Date().toLocaleString());
         
