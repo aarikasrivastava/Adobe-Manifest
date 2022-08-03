@@ -43,17 +43,9 @@ assumptions[0]= [mailingScanningFaxingSaving.toString() , printingScanningFaxing
 
               factor= annual_transaction/10 ; 
 var thirdSlide = new Array();
-thirdSlide.push(factor*gallonsOfWater);
-thirdSlide.push(factor * EquivalentOfLoadsOfLaundry);
-thirdSlide.push(factor * PoundsOfWood);
-thirdSlide.push(factor * EquivalentOfTrees);
-thirdSlide.push(factor * PoundsOfWaste);
-thirdSlide.push(factor * EquivalentOfReamsOfPaper);
-thirdSlide.push(factor * PoundsOfGreenhouseGasses);
-thirdSlide.push(factor * EquivalentOfDaysOfDrivingYourCar);
-thirdSlide.push(factor * KWHoursOfTotalEnergy);
-thirdSlide.push(factor*EquivalentOfDaysOfRefrigeratorUse)
-              makeTable(arr,assumptions,curr,thirdSlide);
+thirdSlide[0]=[(factor*gallonsOfWater).toString(),(factor * EquivalentOfLoadsOfLaundry).toString(),
+      (factor * PoundsOfWood).toString(),(factor * EquivalentOfTrees).toString(),(factor * PoundsOfWaste).toString(),(factor * EquivalentOfReamsOfPaper).toString(),
+      (factor * PoundsOfGreenhouseGasses).toString(),(factor * EquivalentOfDaysOfDrivingYourCar).toString(),(factor * KWHoursOfTotalEnergy).toString(),(factor*EquivalentOfDaysOfRefrigeratorUse).toString()];
               // html to pdf download
              // html2pdf().from(tbl).toPdf().save(arr[1][0]+"_"+new Date().toLocaleString());
         
