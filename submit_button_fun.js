@@ -40,7 +40,20 @@ assumptions[0]= [mailingScanningFaxingSaving.toString() , printingScanningFaxing
               var arr= new Array()
               arr[0]=data[0]
               arr[1]=data[i]
-              makeTable(arr,assumptions,curr);
+
+              factor= annual_transaction/10 ; 
+var thirdSlide = new Array();
+thirdSlide.push(factor*gallonsOfWater);
+thirdSlide.push(factor * EquivalentOfLoadsOfLaundry);
+thirdSlide.push(factor * PoundsOfWood);
+thirdSlide.push(factor * EquivalentOfTrees);
+thirdSlide.push(factor * PoundsOfWaste);
+thirdSlide.push(factor * EquivalentOfReamsOfPaper);
+thirdSlide.push(factor * PoundsOfGreenhouseGasses);
+thirdSlide.push(factor * EquivalentOfDaysOfDrivingYourCar);
+thirdSlide.push(factor * KWHoursOfTotalEnergy);
+thirdSlide.push(factor*EquivalentOfDaysOfRefrigeratorUse)
+              makeTable(arr,assumptions,curr,thirdSlide);
               // html to pdf download
              // html2pdf().from(tbl).toPdf().save(arr[1][0]+"_"+new Date().toLocaleString());
         

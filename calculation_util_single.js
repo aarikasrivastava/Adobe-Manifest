@@ -24,6 +24,24 @@ var USDtoGBP1=0.766;
 var USDtoAUD1=1.345;
 var USDtoEURO1=0.918;
 
+var gallonsOfWater = 1.07 ; 
+var EquivalentOfLoadsOfLaundry=0.028;
+var PoundsOfWood = 0.373 ;
+var EquivalentOfTrees=0.001;
+var PoundsOfWaste= 0.059;
+var EquivalentOfReamsOfPaper = 0.012;
+var PoundsOfGreenhouseGasses = 0.9;
+var EquivalentOfDaysOfDrivingYourCar = 0.03;
+var KWHoursOfTotalEnergy = 0.374;
+var EquivalentOfDaysOfRefrigeratorUse = 0.553;
+
+
+
+
+
+
+
+
 document.getElementById("digitalEnrollmentTransactions").value =totalDigitalEnrollment1;
 document.getElementById("timeSavedTransactions").value=timeSavedTransactions1;
 document.getElementById("timeSavedEnrollment").value=timeSavedEnrollment1;

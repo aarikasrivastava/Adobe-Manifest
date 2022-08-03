@@ -1,6 +1,7 @@
 function displayContent () {
   //default values
   customerName= document.getElementById('customerName').value;
+  annual_transaction = document.getElementById('totalAnnualTransactions').value;
   totalDigitalEnrollment = document.getElementById('digitalEnrollmentTransactions').value;
   timeSavedTransactions =document.getElementById('timeSavedTransactions').value;
   timeSavedEnrollment = document.getElementById('timeSavedEnrollment').value;
@@ -60,10 +61,23 @@ assumptions[0]= [totalDigitalEnrollment.toString(), mailingScanningFaxingSaving.
 avgPagesPerTransaction.toString() , employeesComplianceRegulatory.toString() , hoursSpentEmployeeComplianceRegulatory.toString() ,
  percentReductionComplianceRegulatory.toString() , compensationComplianceRegulatoryStaff.toString() ,percentCostESign.toString()]
   
+factor= annual_transaction/10 ; 
+var thirdSlide = new Array();
+thirdSlide.push(factor*gallonsOfWater);
+thirdSlide.push(factor * EquivalentOfLoadsOfLaundry);
+thirdSlide.push(factor * PoundsOfWood);
+thirdSlide.push(factor * EquivalentOfTrees);
+thirdSlide.push(factor * PoundsOfWaste);
+thirdSlide.push(factor * EquivalentOfReamsOfPaper);
+thirdSlide.push(factor * PoundsOfGreenhouseGasses);
+thirdSlide.push(factor * EquivalentOfDaysOfDrivingYourCar);
+thirdSlide.push(factor * KWHoursOfTotalEnergy);
+thirdSlide.push(factor*EquivalentOfDaysOfRefrigeratorUse)
+
 
   var arr_new= new Array();
   arr_new[0]=["Customer Name","Transaction Number","Time/Enrollment Saving","Increased Transactions","Time/Enrollment($)","Customer Experience Value","Compliance Efficiency","Legal Efficiency","Sustainbility Savings","Total Savings"];
-  annual_transaction = document.getElementById('totalAnnualTransactions').value;
+  
   Number_of_digital_enrollments= totalDigitalEnrollment * annual_transaction*0.01;
     result = TimeSavingCalculate(annual_transaction); 
     increased_transactions = increasedTransactions(annual_transaction);
@@ -76,18 +90,11 @@ avgPagesPerTransaction.toString() , employeesComplianceRegulatory.toString() , h
 
   arr_new[1]=[customerName, annual_transaction.toString() ,result.toString() ,increased_transactions.toString(),time_enrollment_$.toString(),customerExperience.toString(), compliance_Efficiency.toString(), legal_efficiency.toString(),sustainbility_saving.toString(), total_saving.toString()];
  
-makeTable(arr_new,assumptions,curr);
+makeTable(arr_new,assumptions,curr,thirdSlide);
 
 
 
  //html2pdf().from(res).toPdf().save(arr_new[1][0]+"_"+new Date().toLocaleString());
-console.log(arr_new);
-   console.log(result);
-  console.log(increased_transactions);
-  console.log( time_enrollment_$);
-  console.log(customerExperience);
-  console.log(compliance_Efficiency);
-  console.log(legal_efficiency);
-  console.log(total_saving);
+ console.log(thirdSlide);
  
 }

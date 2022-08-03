@@ -1,4 +1,4 @@
-function makeTable(arr,assumptions,curr) 
+function makeTable(arr,assumptions,curr,thirdSlide) 
 {
    
   let pptx = new PptxGenJS();
