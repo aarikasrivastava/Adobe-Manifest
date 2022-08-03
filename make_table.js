@@ -66,6 +66,14 @@ function makeTable(arr,assumptions,curr,thirdSlide)
 
         let slide3 = pptx.addSlide();
   slide3.addImage({ path: "slide3background.png",  w: 10 , h:5.55});
+
+  slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 0.8, y: 2.95})
+  slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 2.5, y: 2.95})
+  slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 4.5, y: 2.95})
+  slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 6.2, y: 2.95})
+  slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 8.1, y: 2.95})
+
+  
         
       
         pptx.writeFile({ fileName: arr[1][0]+"("+new Date().toLocaleString()+")"});
