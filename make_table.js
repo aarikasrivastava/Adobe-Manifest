@@ -73,7 +73,17 @@ function makeTable(arr,assumptions,curr,thirdSlide)
   slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 6.2, y: 2.95})
   slide3.addImage({ path: "blankSpace.png", w:1, h:0.2 , x: 8.1, y: 2.95})
 
-  
+  slide3.addText(thirdSlide[0][0], {x: 0.8, y: 2.23, color:'ffffff', bold: true})
+  slide3.addText(thirdSlide[0][2], {x: 2.8, y: 2.23, color:'ffffff', bold: true})
+  slide3.addText(thirdSlide[0][4], {x: 4.7, y: 2.23, color:'ffffff', bold: true})
+  slide3.addText(thirdSlide[0][6], {x: 6.7, y: 2.23, color:'ffffff', bold: true})
+  slide3.addText(thirdSlide[0][8], {x: 8.55, y: 2.23, color:'ffffff', bold: true})
+
+  slide3.addText(thirdSlide[0][1], {x: 0.9, y: 3.03, color:'000000', bold: true , fontSize: 15})
+  slide3.addText(thirdSlide[0][3], {x: 2.9, y: 3.03, color:'000000', bold: true , fontSize: 15})
+  slide3.addText(thirdSlide[0][5], {x: 4.8, y: 3.03, color:'000000', bold: true , fontSize: 15})
+  slide3.addText(thirdSlide[0][7], {x: 6.8, y: 3.03, color:'000000', bold: true , fontSize: 15})
+  slide3.addText(thirdSlide[0][9], {x:8.75, y: 3.03, color:'000000', bold: true , fontSize: 15})
         
       
         pptx.writeFile({ fileName: arr[1][0]+"("+new Date().toLocaleString()+")"});
