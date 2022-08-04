@@ -34,6 +34,7 @@ var curr
     USD = true; 
     curr = "USD"
     currency = 0.27;
+    symbol="$";
   }
 
   else USD = false;
@@ -42,16 +43,20 @@ var curr
     curr = "GBP"
     GBP = true; 
     currency = 0.21;
+    symbol="£";
   } else GBP = false;
   if(document.getElementById('AUD').checked == true) 
   {curr = "AUD"
     AUD = true;
     currency = 0.37;
+    symbol = "A$";
+
    } else AUD =false;
   if(document.getElementById('EURO').checked == true) {
     curr = "EURO"
     EURO = true;
     currency = 0.24;
+    symbol="€";
      
   }
   else EURO = false;
@@ -70,7 +75,7 @@ amount = currency*factor;
 var thirdSlide = new Array();
 thirdSlide[0]=[(factor*gallonsOfWater).toFixed(1).toString(),(factor * EquivalentOfLoadsOfLaundry).toFixed(1).toString(),
       (factor * PoundsOfWood).toFixed(1).toString(),(factor * EquivalentOfTrees).toFixed(1).toString(),(factor * PoundsOfWaste).toFixed(1).toString(),(factor * EquivalentOfReamsOfPaper).toFixed(1).toString(),
-      (factor * PoundsOfGreenhouseGasses).toFixed(1).toString(),(factor * EquivalentOfDaysOfDrivingYourCar).toFixed(1).toString(),(factor * KWHoursOfTotalEnergy).toFixed(1).toString(),(factor*EquivalentOfDaysOfRefrigeratorUse).toFixed(1).toString(),annual_transaction.toString(),amount.toFixed(1).toString()];
+      (factor * PoundsOfGreenhouseGasses).toFixed(1).toString(),(factor * EquivalentOfDaysOfDrivingYourCar).toFixed(1).toString(),(factor * KWHoursOfTotalEnergy).toFixed(1).toString(),(factor*EquivalentOfDaysOfRefrigeratorUse).toFixed(1).toString(),annual_transaction.toString(),(symbol+(amount.toFixed(1))).toString()];
 
 
 

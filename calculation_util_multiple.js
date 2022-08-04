@@ -44,5 +44,5 @@ if (GBP==true) currency = 0.21;
 if (AUD==true) currency = 0.37;
 if (EURO==true) currency = 0.24;
 
-
+var symbol = "$";
 var curr = "USD"; 
