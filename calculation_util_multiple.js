@@ -39,4 +39,10 @@ GBP=false;
 AUD =false;
 EURO = false;
 
+if (USD==true) currency = 0.27;
+if (GBP==true) currency = 0.21;
+if (AUD==true) currency = 0.37;
+if (EURO==true) currency = 0.24;
+
+
 var curr = "USD"; 
