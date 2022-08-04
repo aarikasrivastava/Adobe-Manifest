@@ -46,7 +46,7 @@ assumptions[0]= [mailingScanningFaxingSaving.toString() , printingScanningFaxing
 var thirdSlide = new Array();
 thirdSlide[0]=[(factor*gallonsOfWater).toFixed(1).toString(),(factor * EquivalentOfLoadsOfLaundry).toFixed(1).toString(),
       (factor * PoundsOfWood).toFixed(1).toString(),(factor * EquivalentOfTrees).toFixed(1).toString(),(factor * PoundsOfWaste).toFixed(1).toString(),(factor * EquivalentOfReamsOfPaper).toFixed(1).toString(),
-      (factor * PoundsOfGreenhouseGasses).toFixed(1).toString(),(factor * EquivalentOfDaysOfDrivingYourCar).toFixed(1).toString(),(factor * KWHoursOfTotalEnergy).toFixed(1).toString(),(factor*EquivalentOfDaysOfRefrigeratorUse).toFixed(1).toString(),annual_transaction.toString(),amount.toFixed(1).toString];
+      (factor * PoundsOfGreenhouseGasses).toFixed(1).toString(),(factor * EquivalentOfDaysOfDrivingYourCar).toFixed(1).toString(),(factor * KWHoursOfTotalEnergy).toFixed(1).toString(),(factor*EquivalentOfDaysOfRefrigeratorUse).toFixed(1).toString(),annual_transaction.toString(),amount.toFixed(1).toString()];
               // html to pdf download
              // html2pdf().from(tbl).toPdf().save(arr[1][0]+"_"+new Date().toLocaleString());
         
