@@ -15,19 +15,19 @@
 <img src = "https://user-images.githubusercontent.com/62637676/179163675-c7a67a42-5d62-4c95-a1d5-c234dae38cdd.png">
   <li> After login you will be redirected to the ‘Home’ page. Here you can click on either ‘Single customer’ entry or ‘Multiple customer entry’ according to your needs (explained below).</li>
   <li> On the top right corner, you can click logout to go back to login screen.</li>
-<img src = "https://user-images.githubusercontent.com/62637676/179163862-ec00fed5-5f49-4769-8ad9-d68ba65223c2.png">
 
+<img src = "https://user-images.githubusercontent.com/62637676/179163862-ec00fed5-5f49-4769-8ad9-d68ba65223c2.png">
 <h4> For ‘Multiple Customer Entries’: </h4>
   <li> Choose File -> Select Excel file with customer information with correct format (refer to Step 2) -> Submit</li>
 <img src = "https://user-images.githubusercontent.com/62637676/179164163-8a8e1d5e-79f8-4d36-b1d2-4921ade95954.png">
   <li> You will be prompted to select the desired folder to download the value realization report (If this prompt is not coming, refer to Step 1).</li>
-<img src = "https://user-images.githubusercontent.com/62637676/179164267-55bbe587-f648-460b-9d74-fd7b04e651e9.png">
+<img src = "https://user-images.githubusercontent.com/57625428/182844375-43787f67-d40c-4611-a12c-46c16af04e0b.png">
   <li> The final report will be downloaded with date and time for future references. </li>
-<h4> For ‘Single Customer Entr’: </h4>
+<h4> For ‘Single Customer Entry’: </h4>
   <li> Click on ‘Single customer entry’ radio button. You will be redirected to the form displayed below:</li>
-<img src = "https://user-images.githubusercontent.com/62637676/179164558-3c1e5636-c485-4dd1-b363-25507d89cfd1.png">
+<img src = "https://user-images.githubusercontent.com/57625428/182844546-abecf6fb-25e7-494f-9b7d-3f887bcef29f.png">
   <li> Add customer information/ edit the assumptions by clicking on the fields.</li>
-<img src = "https://user-images.githubusercontent.com/62637676/179164735-707c51c1-d1f8-42d1-933a-d6bcb97543df.png">
+<img src = "https://user-images.githubusercontent.com/57625428/182844625-179320aa-b8ad-4e05-ba28-8bdc95307a09.png">
   <li> Select required currency conversion and click ‘Submit Form’.</li>
-<img src = "https://user-images.githubusercontent.com/62637676/179164818-dc169fa9-5a94-41e4-81f5-9f3b9a4677e2.png">
+<img src = "https://user-images.githubusercontent.com/57625428/182844691-bee1c8fb-1f57-4ea8-ab00-b5085bda200c.png">
   <li> Select location for file download and click ‘save’. </li>
