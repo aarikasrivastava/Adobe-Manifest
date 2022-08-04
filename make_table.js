@@ -86,7 +86,7 @@ function makeTable(arr,assumptions,curr,thirdSlide)
   slide3.addText(thirdSlide[0][9], {x:8.75, y: 3.03, color:'000000', bold: true , fontSize: 15})
         
   slide3.addText(thirdSlide[0][10], {x: 3.3, y: 4.65, color:'000000', bold: true , fontSize: 20})
-  slide3.addText("amount", {x:5.3, y: 4.65, color:'000000', bold: true , fontSize: 18})
+  slide3.addText(thirdSlide[0][11], {x:5.3, y: 4.65, color:'000000', bold: true , fontSize: 18})
       
         pptx.writeFile({ fileName: arr[1][0]+"("+new Date().toLocaleString()+")"});
         return ; 
